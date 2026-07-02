@@ -59,6 +59,40 @@ body{
 
 }
 
+nav{
+
+    margin-left:auto;
+
+}
+
+.menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--laranjaClaro);
+
+}
+
 .logo{
 
     display:flex;
@@ -321,27 +355,50 @@ body{
 
 }
 
-/*==========================
+/* ==========================
         FLASHCARDS
-===========================*/
+========================== */
 
 .flashcards{
-    padding:120px 8%;
+    padding:100px 8%;
     background:#111;
 }
 
+.flashcards h2{
+    text-align:center;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:3rem;
+    color:var(--laranjaClaro);
+    letter-spacing:3px;
+}
+
+.descricao{
+    text-align:center;
+    color:var(--texto);
+    margin-bottom:50px;
+    font-size:1.1rem;
+}
+
 .cards-grid{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
 }
 
 .card{
+
     perspective:1200px;
+
 }
 
 .card input{
+
     display:none;
+
 }
 
 .card-inner{
@@ -349,11 +406,14 @@ body{
     position:relative;
 
     width:100%;
-    height:520px;
+
+    height:420px;
+
+    display:block;
 
     transform-style:preserve-3d;
 
-    transition:0.8s;
+    transition:.8s;
 
     cursor:pointer;
 
@@ -370,21 +430,22 @@ body{
     position:absolute;
 
     width:100%;
+
     height:100%;
 
-    border-radius:20px;
+    border-radius:18px;
 
     overflow:hidden;
 
     backface-visibility:hidden;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
 
 }
 
 .card-front{
 
-    background:#1f1f1f;
+    background:#1c1c1c;
 
     display:flex;
 
@@ -395,7 +456,8 @@ body{
 .card-front img{
 
     width:100%;
-    height:230px;
+
+    height:180px;
 
     object-fit:cover;
 
@@ -403,7 +465,7 @@ body{
 
 .card-content{
 
-    padding:25px;
+    flex:1;
 
     display:flex;
 
@@ -411,15 +473,13 @@ body{
 
     justify-content:space-between;
 
-    flex:1;
+    padding:25px;
 
 }
 
 .card-content h3{
 
-    color:white;
-
-    font-size:1.2rem;
+    font-size:1.1rem;
 
     line-height:1.6;
 
@@ -435,15 +495,11 @@ body{
 
 .card-back{
 
-    background:linear-gradient(
-        160deg,
-        #ff7a1a,
-        #b84505
-    );
-
-    color:white;
+    background:linear-gradient(135deg,#d95b16,#ff8b3d);
 
     transform:rotateY(180deg);
+
+    color:white;
 
     display:flex;
 
@@ -453,19 +509,61 @@ body{
 
     text-align:center;
 
-    padding:35px;
+    padding:30px;
 
 }
 
 .card-back h2{
 
+    margin-bottom:20px;
+
     font-size:2rem;
+
+}
+
+.card-back p{
+
+    line-height:1.8;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    transition:.3s;
+
+}
+
+footer{
+
+    background:#0d0d0d;
+
+    padding:60px 8%;
+
+    text-align:center;
+
+    border-top:2px solid var(--laranja);
+
+}
+
+footer h2{
+
+    font-family:'Bebas Neue';
+
+    color:var(--laranjaClaro);
+
+    font-size:2.5rem;
+
+    letter-spacing:3px;
 
     margin-bottom:20px;
 
 }
 
-.card-back p{
+footer p{
+
+    color:#bdbdbd;
 
     line-height:1.8;
 
