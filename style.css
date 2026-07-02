@@ -347,6 +347,8 @@ body{
 
     height:400px;
 
+    transition:.3s;
+
 }
 
 .card input{
@@ -402,13 +404,20 @@ body{
 
     padding:20px;
 
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
 }
 
 .card-front{
 
-    background:#1f1f1f;
+     background:linear-gradient(
+        180deg,
+        #262626,
+        #1a1a1a
+    );
 
 }
+
 
 .card-front img{
 
@@ -443,5 +452,27 @@ body{
     justify-content:center;
 
     text-align:center;
+
+}
+
+.descricao{
+
+    max-width:700px;
+
+    margin:25px auto 60px;
+
+    text-align:center;
+
+    color:var(--texto);
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
 
 }
