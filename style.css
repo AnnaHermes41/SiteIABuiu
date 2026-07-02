@@ -392,6 +392,15 @@ nav{
 .card{
 
     perspective:1200px;
+    height:420px;
+
+    transition:.35s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
 
 }
 
@@ -430,22 +439,37 @@ nav{
     position:absolute;
 
     width:100%;
-
     height:100%;
 
-    border-radius:18px;
+    border-radius:20px;
 
     overflow:hidden;
 
     backface-visibility:hidden;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.35);
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.45);
+
+}
+
+.card:hover .card-face{
+
+    border:1px solid var(--laranjaClaro);
+
+    box-shadow:
+        0 15px 35px rgba(217,91,22,.45);
 
 }
 
 .card-front{
 
-    background:#1c1c1c;
+    background:linear-gradient(
+        180deg,
+        #242424,
+        #171717
+    );
 
     display:flex;
 
@@ -456,10 +480,17 @@ nav{
 .card-front img{
 
     width:100%;
-
-    height:180px;
+    height:210px;
 
     object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
 
 }
 
@@ -479,9 +510,11 @@ nav{
 
 .card-content h3{
 
-    font-size:1.1rem;
+    font-size:1.18rem;
 
-    line-height:1.6;
+    line-height:1.7;
+
+    font-weight:600;
 
 }
 
@@ -490,6 +523,10 @@ nav{
     color:var(--laranjaClaro);
 
     font-weight:600;
+
+    font-size:.95rem;
+
+    letter-spacing:.5px;
 
 }
 
